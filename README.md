@@ -15,4 +15,4 @@ The changes that were made to CSS were to fit Matrix theme.
         - Styling of font. (font-family)
         - Changed images of hearts. (liveHeart.png and lostHeart.png)
         - Added h3 element to state it was the matrix edition.
-        - Added audio + play button with a 
+        - Added audio + play button
