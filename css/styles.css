@@ -4,13 +4,13 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
-  --color-start: #5b85b7;
-  --color-neutral: #445069;
-  --color-neutral-light: #D2D2D2;
-  --color-keys: #37474F;
-  --color-keys-light: #E5E5E5;
+  --color-win: #006e0d;
+  --color-lose: #ff0000;
+  --color-start: #ffffff;
+  --color-neutral: #ffffff;
+  --color-neutral-light: #38383846;
+  --color-keys: #ffffff;
+  --color-keys-light: #232323;
   --font-size-large: 60px;
   --font-size-medium: 20px;
   --transition: all .2s ease-in-out;
@@ -20,7 +20,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Andale Mono';
 }
 
 body {
@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background-color: #000000;
 }
 
 li, ol, ul {
@@ -42,18 +43,23 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  color:#008910;
+}
+
 h1 {
   font-size: 30px;
+  color: #ffffff;
 }
 
 button {
   margin: 6px;
   border: 1px solid transparent;
-  padding: .5rem 1rem;
+  padding: 0.2rem 0.5rem;
   color: var(--color-keys);
   font-size: var(--font-size-medium);
   background-color: var(--color-keys-light);
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
@@ -81,12 +87,13 @@ button {
 
 #phrase ul li{
   margin-top: 15px;
+  margin-inline: 5px;
 }
 
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #ffffff;
 }
 
 
@@ -111,7 +118,7 @@ button {
 
 .show {
   color: #fff;
-  background-color: #4ac0d5;
+  background-color: #197d004b;
   font-size: 20px;
   height: 65px;
   width: 65px;
@@ -131,21 +138,21 @@ button {
 }
 
 .chosen {
-  background: #3a3f58;
+  background: #197d004b;
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: #f7a964;
-  color: #FFFFFF;
+  background: #000000;
+  color: #000000;
 }
 
 .btn__reset {
   padding: 16px;
   margin: 50px auto;
-  background: #f7a964;
+  background: #000000;
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -166,7 +173,7 @@ button {
   display: flex;
   flex-direction: column;
   position: fixed;
-  color: #FFFFFF;
+  color: #000000;
   justify-content: center;
   top: 0;
   bottom: 0;
@@ -176,15 +183,19 @@ button {
 }
 
 .title {
-  color: #FFF;
+  color: rgb(0, 0, 0);
+}
+
+.title1 {
+  color: rgb(255, 255, 255);
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #006e0d;
 }
 
 .start a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.214);
 }
 
 .win {
@@ -196,7 +207,7 @@ button {
 }
 
 .lose {
-  background-color: #f5785f;
+  background-color: #006e0d;
 }
 
 .lose a {
