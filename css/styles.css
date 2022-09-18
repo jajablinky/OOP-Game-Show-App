@@ -20,7 +20,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Andale Mono';
+  font-family: 'Andale Mono', monospace;
 }
 
 body {
