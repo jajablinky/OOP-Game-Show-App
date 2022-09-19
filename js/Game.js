@@ -7,9 +7,7 @@ class Game {
     this.missed = 0;
     this.phrases = [
       new Phrase("There is no spoon"),
-      new Phrase(
-        "I can only show you the door"
-      ),
+      new Phrase("I can only show you the door"),
       new Phrase("Choice is an illusion"),
       new Phrase(
         "To deny our own impulses is to deny the very thing that makes us human"
@@ -33,25 +31,11 @@ Selects random phrase from phrases property
    */
 
   startGame() {
-    //resets game
-    this.missed = 0;
-    phraseDiv.innerHTML = '';
-    console.log(phraseDiv);
-    const buttons = keyboardSection.getElementsByTagName('button');
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].className = 'key';
-      buttons[i].disabled = false;
-    }
-    console.log(buttons);
-    for (let i = 0; i < hearts.length; i++) {
-      hearts[i].firstElementChild.src = 'images/liveHeart.png'
-    };
-
     //starts game
     overlay.style.display = "none";
     this.activePhrase = this.getRandomPhrase();
     this.activePhrase.addPhraseToDisplay();
-    }
+  }
 
   /**
    * Handles onscreen keyboard button clicks
@@ -105,11 +89,30 @@ Selects random phrase from phrases property
   }
 
   /**
+   * resets game
+   */
+  resetGame() {
+    this.missed = 0;
+    phraseDiv.innerHTML = "";
+    console.log(phraseDiv);
+    const buttons = keyboardSection.getElementsByTagName("button");
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].className = "key";
+      buttons[i].disabled = false;
+    }
+    console.log(buttons);
+    for (let i = 0; i < hearts.length; i++) {
+      hearts[i].firstElementChild.src = "images/liveHeart.png";
+    }
+  }
+
+  /**
    * Displays game over message
    * @param {boolean} gameWon - Whether or not the user won the game
    */
 
   gameOver(win) {
+    this.resetGame()
     const message = document.getElementById("game-over-message");
     overlay.style.display = "flex";
     if (win) {
@@ -117,7 +120,8 @@ Selects random phrase from phrases property
       overlay.className = "win";
       return "win";
     } else {
-      message.innerHTML = "error: uhh oh./a////fj malfunction//, please try again";
+      message.innerHTML =
+        "error: uhh oh./a////fj malfunction//, please try again";
       overlay.className = "lose";
       return "loss";
     }
